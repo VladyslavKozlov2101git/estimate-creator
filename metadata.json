@@ -1,0 +1,5 @@
+{
+  "name": "Estimate Creator (Генератор ТЗ)",
+  "description": "A professional tool for PMs and Sales Managers to structure client requirements and generate technical specifications in JSON format in real-time.",
+  "requestFramePermissions": []
+}

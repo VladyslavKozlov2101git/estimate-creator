@@ -1,13 +1,9 @@
 import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
-  // process.cwd() краще ніж '.' для сумісності
-  const env = loadEnv(mode, process.cwd(), '');
-
   return {
-    // 👇 ВАЖЛИВО: Це назва вашого репозиторію
     base: '/estimate-creator/',
 
     server: {
@@ -15,7 +11,6 @@ export default defineConfig(({ mode }) => {
       host: '0.0.0.0',
     },
     plugins: [react()],
-    define: {},
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
